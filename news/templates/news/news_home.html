@@ -6,15 +6,19 @@
 <!--шаблонизатор джинджа-->
 {% block content %}
     <div class="features">
-        <h1>something</h1>
+        <h1>Релиз стихов</h1>
 
-        {% for el in news %}
-            <div class="alert alert-warning">
-                <h3>{{ el.title }}</h3>
-                <p>{{ el.anons }}</p>
-
-            </div>
-        {% endfor %}
+        {% if news %}
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Ждем когда на автора ниспадет вдохновенье</p>
+        {%endif%}
+{# комм #}
 
     </div>
 {% endblock %}
