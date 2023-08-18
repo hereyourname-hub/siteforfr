@@ -1,15 +1,19 @@
 body {
     background: #BBB8AF;
+    margin: 0;
 }
 
 aside {
-    float: left;
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0; /* Отступ сверху */
+    left: 0; /* Отступ слева */
     background: #F1EFE7;
     width: 20%;
     padding: 2.5%;
     height: 100vh;
     color: #000000;
-    border-right: 5px solid #4d4d4d
+    border-right: 5px solid #4d4d4d;
+    overflow-y: auto; /* Включение вертикальной прокрутки */
 }
 
 aside img {
@@ -45,27 +49,27 @@ aside ul li:hover, aside ul a:hover {
 }
 
 main .features {
-    float: left;
+    margin-left: 25%; /* Отступ слева, чтобы не перекрывал sidebar */
     color: #000000;
     margin-top: 100px;
     text-align: center;
     width: 75%;
+    padding: 20px; /* Добавление отступа для контента */
+    box-sizing: border-box; /* Учитываем отступ внутреннего контента */
 }
 
 main .features h1 {font-size: 50px;}
 main .features p {max-width: 400px; margin: 20px auto}
 
 .alert-warning {
-    float: left;
     clear: both;
     width: 400px;
-    margin: 20px 34%;
+    margin: 20px auto;
     text-align: left;
 }
 
 form {
     margin-left: 32%;
     width: 500px;
-    margin-top: 50px
+    margin-top: 50px;
 }
-

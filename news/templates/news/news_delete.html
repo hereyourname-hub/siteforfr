@@ -1,0 +1,15 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Удаление стиха{% endblock %}
+
+
+<!--шаблонизатор джинджа-->
+{% block content %}
+    <div class="features">
+        <h1>Удаление стиха</h1>
+      <form method="post">
+          {% csrf_token %}
+          <button class="btn btn-danger" type="submit">Удалить стих</button>
+      </form>
+    </div>
+{% endblock %}
