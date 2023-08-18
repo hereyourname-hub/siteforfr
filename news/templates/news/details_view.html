@@ -2,15 +2,12 @@
 
 {% block title %}{{ article.title }}{% endblock %}
 
-
-<!--шаблонизатор джинджа-->
 {% block content %}
     <div class="features">
         <h1>{{ article.title }}</h1>
-        <p>{{ article.full_text }}</p>
+        <pre>{{ article.full_text }}</pre>
         <p>{{ article.date }}</p>
         <a href="{% url 'news_delete' article.id %}" class="btn btn-danger">Удалить</a>
         <a href="{% url 'news_update' article.id %}" class="btn btn-info">Редактировать</a>
-
     </div>
 {% endblock %}

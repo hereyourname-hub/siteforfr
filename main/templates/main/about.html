@@ -1,12 +1,23 @@
-{% extends 'main/layout.html'%}
+{% extends 'main/layout.html' %}
+{% load static %}
 
-{% block title %}Title{% endblock %}
+{% block title %}About Me{% endblock %}
 
-<!--шаблонизатор джинджа-->
 {% block content %}
     <div class="features">
-        <h1>Про меня</h1>
-        <p>fdfedsefr frdgd fdffffff efrerhf refjherk erjkfh</p>
-        <button class="btn btn-danger">На страницу контакты</button>
+        <h1>About me</h1>
+        <div class="profile-info">
+            <img src="{% static 'main/img/me.png' %}" alt="me" class="me-icon">
+            <p><strong>Имя:</strong> Айкɵл</p>
+            <p><strong>Возраст:</strong> Не важно сколько мне лет</p>
+            <p><strong>Instagram:</strong> aikolskiy</p>
+            <p><strong>О себе:</strong> Я люблю писать стихи и думать во что поиграть потом.</p>
+        </div>
+        <div class="happy-info">
+            <h1>Jar of</h1>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Happiness</h3>
+        </div>
+            <img src="{% static 'main/img/jar.png' %}" alt="me" class="jar-icon">
+
     </div>
 {% endblock %}

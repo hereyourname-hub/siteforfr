@@ -73,3 +73,48 @@ form {
     width: 500px;
     margin-top: 50px;
 }
+
+
+.image {
+    top: 9;
+    left: 400;
+    width: 500px; /* Укажите нужную ширину */
+    height: 350px; /* Автоматическая высота, чтобы сохранить пропорции */
+}
+
+
+.image-top-left {
+    position: absolute;
+    top: 0;
+    left: 40;
+    width: 500px; /* Укажите нужную ширину */
+    height: 350px; /* Автоматическая высота, чтобы сохранить пропорции */
+}
+
+
+.profile-info {
+    font-family: "Times New Roman.";
+}
+
+.features{
+    font-family: "Indie Flower", cursive;
+}
+
+.profile-info {
+    text-align: left;
+}
+.me-icon{
+    width: 350px; /* Укажите нужную ширину */
+    height: 300px; /* Автоматическая высота, чтобы сохранить пропорции */
+}
+
+
+.happy-info{
+    font-family: "Indie Flower", cursive;
+}
+
+
+.jar-icon{
+    width: 490px; /* Укажите нужную ширину */
+    height: 350px; /* Автоматическая высота, чтобы сохранить пропорции */
+}

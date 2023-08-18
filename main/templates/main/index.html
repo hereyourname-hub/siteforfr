@@ -1,13 +1,14 @@
-{% extends 'main/layout.html'%}
+{% extends 'main/layout.html' %}
+{% load static %}
 
 {% block title %}{{ title }}{% endblock %}
 
-
-<!--шаблонизатор джинджа-->
 {% block content %}
     <div class="features">
-        <h1>{{ title }}</h1>
-        <p>fdfedsefr frdgd fdffffff efrerhf refjherk erjkfh</p>
-        <button class="btn btn-warning">На страницу про меня</button>
+        <h1>Home</h1>
+        <p>Всем привет и добро пожаловать в мою обитель!<br> Здесь я публикую свои стихи и позицианирую себя как Писатель</p>
+
+        <img src="{% static 'main/img/cloud.png' %}" alt="logo" class="image">
+        <img src="{% static 'main/img/cloud.png' %}" alt="logo" class="image-top-left">
     </div>
 {% endblock %}
