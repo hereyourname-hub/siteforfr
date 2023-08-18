@@ -1,0 +1,14 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+
+<!--шаблонизатор джинджа-->
+{% block content %}
+    <div class="features">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.full_text }}</p>
+        <p>{{ article.date }}</p>
+
+    </div>
+{% endblock %}
