@@ -4,6 +4,38 @@ from .forms import ArticlesForm
 from django.views.generic import DetailView, UpdateView, DeleteView
 
 
+from django.shortcuts import render
+from django.contrib.auth import authenticate, login
+
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+
+
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('home_for_ch')
+        else:
+            error_message = "Неверное имя пользователя или пароль"
+            return render(request, 'news/login.html', {'error_message': error_message})
+    return render(request, 'news/login.html')
+
+
+def home_view(request):
+    return render(request, 'news/home_for_ch.html')
+
+
 def news_home(request):
     news = Articles.objects.order_by('-date')
     return render(request, 'news/news_home.html', {'news': news})
