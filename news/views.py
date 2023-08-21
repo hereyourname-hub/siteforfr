@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Articles
 from .forms import ArticlesForm
@@ -69,7 +70,7 @@ def create(request):
             form.save()
             return redirect('news_home')
         else:
-            error = 'Форма была заполнена некорректно'
+            error = ''
 
     form = ArticlesForm()
 

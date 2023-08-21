@@ -1,13 +1,9 @@
 {% extends 'main/layout.html'%}
-
 {% block title %}something{% endblock %}
-
-
 <!--шаблонизатор джинджа-->
 {% block content %}
     <div class="features">
         <h1>Релиз стихов</h1>
-
         {% if news %}
             {% for el in news %}
                 <div class="alert alert-warning">
@@ -20,6 +16,5 @@
             <p>Ждем когда на автора ниспадет вдохновенье</p>
         {%endif%}
 {# комм #}
-
     </div>
 {% endblock %}

@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<p>here</p>
-<p>Пользователь: {{ request.user }}</p>
+{% extends 'main/layout.html' %}
+{% block title %}Домашняя страница{% endblock %}
 
+{% block content %}
 
+<div class="features">
+    <h1>"{{ request.user }}"</h1>
+    <form method="post" action="{% url 'create' %}">
+          {% csrf_token %}
+          {{ form.title }}<br>
+          {{ form.anons }}<br>
+          {{ form.full_text }}<br>
+          {{ form.date }}<br>
+          <span>{{ error }}</span>
+          <div class="center-button">
+            <button class="btn btn-info" type="submit">Добавить стих</button>
+        </div>
 
-</body>
-</html>
+        <div class="center-button_1">
+            <button class="btn btn-danger" type="submit">Редактировать</button>
+        </div>
+      </form>
+</div>
+{% endblock %}
