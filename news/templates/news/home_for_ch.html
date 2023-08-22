@@ -1,4 +1,6 @@
 {% extends 'main/layout.html' %}
+
+{% load static %}
 {% block title %}Домашняя страница{% endblock %}
 
 {% block content %}
@@ -13,11 +15,19 @@
           {{ form.date }}<br>
           <span>{{ error }}</span>
           <div class="center-button">
-            <button class="btn btn-info" type="submit">Добавить стих</button>
+            <button class="btn btn-dark" type="submit">Добавить стих</button>
         </div>
         <div class="center-button_1">
-             <a href="{% url 'news_home' %}" class="btn btn-danger" type="submit">Перейти редактировании</a>
+             <a href="{% url 'news_home' %}" class="btn btn-dark" type="submit">Редактировать</a>
         </div>
       </form>
+
+
+    <div class="happy-info">
+            <h1>&nbsp;&nbsp</h1>
+            <p>"Слова — это инструменты, с помощью которых мы создаем мосты между своим внутренним миром и внешним миром.<br>
+                Каждое слово, написанное с любовью и страстью, может стать источником вдохновения, переживаний и понимания для тех, кто читает."</p>
+        </div>
+            <img src="{% static 'main/img/sun.gif' %}" alt="me" class="jar-icon">
 </div>
 {% endblock %}
