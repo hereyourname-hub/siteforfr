@@ -129,12 +129,10 @@ form {
 }
 
 .center-button button {
-    width: 200px; /* Ширина кнопки */
-    height: 50px; /* Высота кнопки */
+    width: 198px; /* Ширина кнопки */
+    height: 40px; /* Высота кнопки */
 
 }
-
-
 
 .center-button_1 {
     display: flex;

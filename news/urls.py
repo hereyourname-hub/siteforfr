@@ -9,5 +9,6 @@ urlpatterns = [
     path('<int:pk>/update', views.NewsUpdateView.as_view(), name='news_update'),
     path('<int:pk>/delete', views.NewsDeleteView.as_view(), name='news_delete'),
     path('login/', views.login_view, name='login'),
-    path('home_for_ch/', views.home_view, name='home_for_ch')
+    path('home_for_ch/', views.home_view, name='home_for_ch'),
+    path('poems/', views.poems_view, name='poems'),
 ]

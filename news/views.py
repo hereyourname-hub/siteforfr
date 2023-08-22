@@ -37,6 +37,11 @@ def home_view(request):
     return render(request, 'news/home_for_ch.html')
 
 
+def poems_view(request):
+    articles = Articles.objects.all()
+    return render(request, 'news/poems.html', {'articles': articles})
+
+
 def news_home(request):
     news = Articles.objects.order_by('-date')
     return render(request, 'news/news_home.html', {'news': news})
